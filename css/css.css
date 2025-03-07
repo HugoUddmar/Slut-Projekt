@@ -1,13 +1,115 @@
 body{
-    margin: 0;
+    margin: 1vw;
+    margin-bottom:0;
+    background-color:black;
 }
 
+p{
+    color:white
+}
 
-@media screen and (max-width:500px)
+h1{
+    color:white;
+}
+
+.indexImg{
+    object-fit:fill;
+    width:100%;
+    height:100%;
+}
+
+#indexWrap{
+    display:grid;
+    width:100%;
+    height:110vh;
+    gap:1vw;
+
+    grid-template-columns:25% 25% 1fr 25%;
+    grid-template-rows:10vh 25vh 20vh 1fr 15vh 1fr 10vh;
+    grid-template-areas:
+    'nv nv nv nv'
+    'hd hd hd hd'
+    'img1 img2 img2 img3'
+    'sc1 sc1 img5 img5'
+    'sc1 sc1 sc2 sc2'
+    'as as sc2 sc2'
+    'ft ft ft ft';
+    
+} 
+
+#indexNav
 {
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    grid-area:nv;
+}
+
+#indexHeader
+{
+    display:flex;
+    align-items:center;
+    justify-content:space-evenly;
+    grid-area:hd;
+}
+
+#indexImg1
+{
+    grid-area: img1;
+}
+
+#indexImg2
+{
+    grid-area: img2;
+}
+#indexImg3
+{
+    grid-area: img3;
+}
+
+#indexImg4{
+    display:none;
+}
+
+#indexImg5
+{
+    grid-area: img5;
+}
+#indexSection1
+{
+    grid-area: sc1;
+}
+#indexSection2{
+    grid-area: sc2;
+}
+#indexAside{
+    grid-area:as;
+}
+
+#indexFooter
+{
+    grid-area:ft;
+}
+
+@media screen and (min-width:700px)
+{
+    .indexImg{
+        object-fit:fill;
+        width:100%;
+        height:100%;
+    }
+
     body{
-        margin: 1vw;
-        margin-bottom:0;
+        background-color:black;
+        margin:1vw;
+    }
+
+    p{
+        color:white
+    }
+
+    h1{
+        color:white;
     }
     
     #indexWrap{
@@ -15,70 +117,72 @@ body{
         width:100%;
         height:110vh;
         gap:1vw;
-
+    
         grid-template-columns:25% 25% 1fr 25%;
         grid-template-rows:10vh 25vh 20vh 1fr 15vh 1fr 10vh;
         grid-template-areas:
         'nv nv nv nv'
         'hd hd hd hd'
-        'img1 img2 img2 img3'
-        'sc1 sc1 img4 img4'
+        'img1 img2 img3 img4'
+        'sc1 sc1 img5 img5'
         'sc1 sc1 sc2 sc2'
         'as as sc2 sc2'
         'ft ft ft ft';
-        
     } 
-
+    
     #indexNav
     {
+        display:flex;
+        align-items:center;
+        justify-content:space-evenly;
         grid-area:nv;
-        background-color:red;
     }
-
+    
     #indexHeader
     {
+        display:flex;
+        align-items:center;
+        justify-content:space-evenly;
         grid-area:hd;
-        background-color:yellow;
     }
-
+    
     #indexImg1
     {
         grid-area: img1;
-        background-color:greenyellow;
     }
-
+    
     #indexImg2
     {
         grid-area: img2;
-        background-color:blue;
     }
     #indexImg3
     {
         grid-area: img3;
-        background-color:pink;
     }
+    
+    #indexImg4
+    {
+        display: block;
+        grid-area: img4;
+    }
+    
     #indexImg5
     {
-        grid-area: img4;
-        background-color:gold;
+        grid-area: img5;
     }
     #indexSection1
     {
         grid-area: sc1;
-        background-color:aquamarine;
     }
     #indexSection2{
         grid-area: sc2;
-        background-color:blueviolet;
     }
     #indexAside{
         grid-area:as;
-        background-color:cornflowerblue;
     }
-
+    
     #indexFooter
     {
         grid-area:ft;
-        background-color:forestgreen;
     }
 }
