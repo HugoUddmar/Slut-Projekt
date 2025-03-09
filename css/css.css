@@ -1,7 +1,12 @@
+/*Det allmänna för mobilsidorna*/
+button
+{
+    background-color: green;
+}
+
 body{
-    margin: 1vw;
-    margin-bottom:0;
     background-color:black;
+    margin:1vw;
 }
 
 p{
@@ -12,45 +17,90 @@ h1{
     color:white;
 }
 
-.indexImg{
-    object-fit:fill;
-    width:100%;
-    height:100%;
+h2{
+    color:white;
 }
 
-#indexWrap{
-    display:grid;
-    width:100%;
-    height:110vh;
-    gap:1vw;
+h3{
 
-    grid-template-columns:25% 25% 1fr 25%;
-    grid-template-rows:10vh 25vh 20vh 1fr 15vh 1fr 10vh;
-    grid-template-areas:
-    'nv nv nv nv'
-    'hd hd hd hd'
-    'img1 img2 img2 img3'
-    'sc1 sc1 img5 img5'
-    'sc1 sc1 sc2 sc2'
-    'as as sc2 sc2'
-    'ft ft ft ft';
-    
-} 
+    color:white;
+}
 
-#indexNav
+ul{
+    color:white;
+}
+
+li{
+    color:white;
+}
+
+footer
 {
+    grid-area:ft;
+    border:5px solid green;
+}
+
+nav
+{
+    border:5px solid green;
     display:flex;
     align-items:center;
     justify-content:space-evenly;
     grid-area:nv;
 }
 
-#indexHeader
+header
 {
+    border:5px solid green;
     display:flex;
     align-items:center;
     justify-content:space-evenly;
     grid-area:hd;
+}
+
+  
+
+/*mobil huvudsidan*/
+
+#indexWrap{
+    display:grid;
+    width:100%;
+    height:125vh;
+    gap:1vw;
+
+    grid-template-columns:1fr 1fr 1fr 1fr;
+    grid-template-rows: 10vh 25vh 20vh repeat(3,minmax(15vh,1fr)) 10vh;
+    grid-template-areas:
+    'nv nv nv nv'
+    'hd hd hd hd'
+    'img1 img2 img2 img3'
+    'sc1 sc1 img5 img5'
+    'sc1 sc1 sc2 sc2'
+    'as  as  sc2 sc2'
+    'ft ft ft ft';
+} 
+
+#indexSection1
+{
+    display:flex;
+    flex-direction:column;
+    grid-area: sc1;
+    overflow:scroll;
+}
+#indexSection2{
+    display:flex;
+    flex-direction:column;
+    grid-area: sc2;
+    overflow:scroll;
+}
+#indexAside{
+    grid-area:as;
+}
+
+.indexImg{
+    object-fit:fill;
+    height:100%;
+    width:100%;
 }
 
 #indexImg1
@@ -67,90 +117,128 @@ h1{
     grid-area: img3;
 }
 
-#indexImg4{
-    display:none;
+#indexImg4
+{
+    display: none;
 }
 
 #indexImg5
 {
     grid-area: img5;
 }
-#indexSection1
-{
-    grid-area: sc1;
-}
-#indexSection2{
-    grid-area: sc2;
-}
-#indexAside{
-    grid-area:as;
-}
 
-#indexFooter
+@media screen and (min-width:500px)
 {
-    grid-area:ft;
-}
-
-@media screen and (min-width:700px)
-{
-    .indexImg{
-        object-fit:fill;
-        width:100%;
-        height:100%;
+    /*Det allmänna för datorsidorna button*/
+    button
+    {
+        background-color: green;
     }
-
+    
     body{
         background-color:black;
         margin:1vw;
     }
-
+    
     p{
         color:white
     }
-
+    
     h1{
         color:white;
     }
+
+    h2{
+        color:white;
+    }
     
-    #indexWrap{
-        display:grid;
-        width:100%;
-        height:110vh;
-        gap:1vw;
+    h3{
     
-        grid-template-columns:25% 25% 1fr 25%;
-        grid-template-rows:10vh 25vh 20vh 1fr 15vh 1fr 10vh;
-        grid-template-areas:
-        'nv nv nv nv'
-        'hd hd hd hd'
-        'img1 img2 img3 img4'
-        'sc1 sc1 img5 img5'
-        'sc1 sc1 sc2 sc2'
-        'as as sc2 sc2'
-        'ft ft ft ft';
-    } 
+        color:white;
+    }
+
+    ul{
+        color:white;
+    }
     
-    #indexNav
+    li{
+        color:white;
+    }
+    
+    footer
     {
+        grid-area:ft;
+        border:5px solid green;
+    }
+    
+    nav
+    {
+        border:5px solid green;
         display:flex;
         align-items:center;
         justify-content:space-evenly;
         grid-area:nv;
     }
     
-    #indexHeader
+    header
     {
+        border:5px solid green;
         display:flex;
         align-items:center;
         justify-content:space-evenly;
         grid-area:hd;
     }
     
+      
+
+    /*Dator huvudsidan*/
+
+    #indexWrap{
+        display:grid;
+        width:100%;
+        height:125vh;
+        gap:1vw;
+
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        grid-template-rows: 10vh 25vh 20vh repeat(3,minmax(15vh,1fr)) 10vh;
+        grid-template-areas:
+        'nv nv nv nv'
+        'hd hd hd hd'
+        'img1 img2 img3 img4'
+        'sc1 sc1 img5 img5'
+        'sc1 sc1 sc2 sc2'
+        'as  as  sc2 sc2'
+        'ft ft ft ft';
+    } 
+
+    #indexSection1
+    {
+        display:flex;
+        flex-direction:column;
+        overflow:scroll;
+        grid-area: sc1;
+    }
+    #indexSection2{
+        display:flex;
+        flex-direction:column;
+        overflow:scroll;
+        grid-area: sc2;
+    }
+    #indexAside{
+        grid-area:as;
+    }
+
+    .indexImg{
+        object-fit:fill;
+        height:100%;
+        width:100%;
+    }
+
     #indexImg1
     {
         grid-area: img1;
     }
-    
+
     #indexImg2
     {
         grid-area: img2;
@@ -159,30 +247,63 @@ h1{
     {
         grid-area: img3;
     }
-    
+
     #indexImg4
     {
         display: block;
         grid-area: img4;
     }
-    
+
     #indexImg5
     {
         grid-area: img5;
     }
-    #indexSection1
+
+    /*Dator mina spel sidan*/
+
+    #minaSpelWrap
     {
-        grid-area: sc1;
+        display:grid;
+        width:100%;
+        height:200vh;
+        gap:1vw;
+
+        grid-template-columns:1fr 1fr;
+        grid-template-rows:10vh 25vh repeat(3,minmax(25vh,2.5fr) minmax(40vh,4fr)) 10vh;
+        grid-template-areas:
+        'nv nv'
+        'hd hd'
+        'sc1 sc1'
+        'ar1 ar1'
+        'sc2 sc2'
+        'ar2 ar2'
+        'sc3 sc3'
+        'ar3 ar3'
+        'ft ft';
     }
-    #indexSection2{
-        grid-area: sc2;
+
+    #spelText1{
+        border:5px solid green; 
+        grid-area:sc1;
     }
-    #indexAside{
-        grid-area:as;
+    #spelText2{
+        border:5px solid green; 
+        grid-area:sc2;
     }
-    
-    #indexFooter
-    {
-        grid-area:ft;
+    #spelText3{
+        border:5px solid green; 
+        grid-area:sc3;
+    }
+    #spel1{
+        border:5px solid green; 
+        grid-area:ar1;
+    }
+    #spel2{
+        border:5px solid green; 
+        grid-area:ar2;
+    }
+    #spel3{
+        border:5px solid green; 
+        grid-area:ar3;
     }
 }
