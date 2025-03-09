@@ -295,6 +295,9 @@ header
         grid-area:sc3;
     }
     #spel1{
+        display:flex;
+        align-items:center;
+        justify-content:space-evenly;
         border:5px solid green; 
         grid-area:ar1;
     }
