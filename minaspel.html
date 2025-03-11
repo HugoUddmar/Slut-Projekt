@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" name="viewport" content="width=device-width, initial-scale=1.0; text/html; charset=utf-8">
   <link rel="stylesheet" href="css/css.css">
-  <link rel="shortcut icon" href="spel/spel(2)/TemplateData/favicon.ico">
-  <link rel="stylesheet" href="spel/spel(2)/TemplateData/style.css">
+  <link rel="shortcut icon" href="spel/spel1/TemplateData/favicon.ico">
+  <link rel="stylesheet" href="spel/spel1/TemplateData/style.css">
   <title>Document</title>
 </head>
 <body>
@@ -39,9 +39,14 @@
       </h1>
     </header>
     <section id="spelText1">
-        <img>
+      <p>
+        I det här spelet utforskade jag video effekter på kameran och ville göra designen själv.
+      </p>
+      <img>
     </section>
     <article id="spel1">
+      <!-- Kod från Unity -->
+
       <div id="unity-container" class="unity-desktop">
         <canvas id="unity-canvas" width=800 height=500 tabindex="-1"></canvas>
         <div id="unity-loading-bar">
@@ -86,12 +91,12 @@
         }
   
         var buildUrl = "Build";
-        var loaderUrl = "spel/spel(2)/" + buildUrl + "/spel(2).loader.js";
+        var loaderUrl = "spel/spel1/" + buildUrl + "/spel1.loader.js";
         var config = {
           arguments: [],
-          dataUrl: "spel/spel(2)/" + buildUrl + "/spel(2).data",
-          frameworkUrl: "spel/spel(2)/" + buildUrl + "/spel(2).framework.js",
-          codeUrl: "spel/spel(2)/" + buildUrl + "/spel(2).wasm",
+          dataUrl: "spel/spel1/" + buildUrl + "/spel1.data",
+          frameworkUrl: "spel/spel1/" + buildUrl + "/spel1.framework.js",
+          codeUrl: "spel/spel1/" + buildUrl + "/spel1.wasm",
           streamingAssetsUrl: "StreamingAssets",
           companyName: "Stol22",
           productName: "mmm",
@@ -132,8 +137,8 @@
   
         } else {
           // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-          canvas.style.width = "800px";
-          canvas.style.height = "500px";
+          canvas.style.width = "100%";
+          canvas.style.height = "100%";
         }
   
         document.querySelector("#unity-loading-bar").style.display = "block";
@@ -157,6 +162,7 @@
         document.body.appendChild(script);
   
       </script>
+       <!-- Här slutar Unitys kod -->
     </article>
     <section id="spelText2">
         <img>
