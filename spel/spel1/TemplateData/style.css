@@ -1,4 +1,4 @@
-#unity-container{
+#unity-container1{
     height:calc(100% - 42px);
     width:100%;
     top:0px;
@@ -7,35 +7,35 @@
 
 /*Kod från Unity, inte min*/
 
-#unity-container.unity-mobile { 
+#unity-container1.unity-mobile1 { 
     width: 100%; height: 100% 
 }
 
-#unity-canvas { 
+#unity-canvas1 { 
     background: #828080 
 }
 
-.unity-mobile #unity-canvas { 
+.unity-mobile1 #unity-canvas1 { 
     width: 100%; height: calc(100% - 42px);
 }
 
-#unity-loading-bar { 
+#unity-loading-bar1 { 
     position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: none 
 }
 
-#unity-logo { 
+#unity-logo1 { 
     width: 154px; height: 130px; background: url('unity-logo-light.png') no-repeat center 
 }
 
-#unity-progress-bar-empty { 
+#unity-progress-bar-empty1 { 
     width: 141px; height: 18px; margin-top: 10px; margin-left: 6.5px; background: url('progress-bar-empty-light.png') no-repeat center 
 }
 
-#unity-progress-bar-full { 
+#unity-progress-bar-full1 { 
     width: 0%; height: 18px; margin-top: 10px; background: url('progress-bar-full-light.png') no-repeat center 
 }
 
-#unity-footer { 
+#unity-footer1 { 
     position: relative 
 }
 
@@ -43,18 +43,18 @@
     display: none 
 }*/
 
-#unity-logo-title-footer { 
+#unity-logo-title-footer1 { 
     float:left; width: 102px; height: 38px; background: url('unity-logo-title-footer.png') no-repeat center 
 }
 
-#unity-build-title { 
+#unity-build-title1 { 
     float: right; margin-right: 10px; line-height: 38px; font-family: arial; font-size: 18px 
 }
 
-#unity-fullscreen-button { 
+#unity-fullscreen-button1 { 
     cursor:pointer; float: right; width: 38px; height: 38px; background: url('fullscreen-button.png') no-repeat center 
 }
 
-#unity-warning { 
+#unity-warning1 { 
     position: absolute; left: 50%; top: 5%; transform: translate(-50%); background: white; padding: 10px; display: none 
 }
