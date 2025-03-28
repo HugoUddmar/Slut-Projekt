@@ -10,7 +10,7 @@ div {
 .menu{
     height: 100vh;
     width: 25vw;
-    background:#175c9c;
+    background:#1b1b1c; /*#175c9c*/
     display:flex;
     flex-direction:column;
     position: fixed;
@@ -22,7 +22,6 @@ div {
 }
 
 .menu-button{
-    
     cursor: pointer;
     display: inline;
     position:absolute;
@@ -60,7 +59,7 @@ p,h1,h2,h3,h4,h5,h6,ul,li,a{
 footer
 {
     grid-area:ft;
-    background-color:#1e76cb;
+    background-color:#252525; /*#1e76cb*/
     display:flex;
     align-items:center;
     justify-content:space-evenly;
@@ -68,7 +67,7 @@ footer
 
 nav
 {
-    background-color:#1e76cb;
+    background-color:#000000; /*#1e76cb*/
     display:flex;
     align-items:center;
     justify-content:space-evenly;
@@ -111,14 +110,15 @@ header
         width: 10vw;
     }
     
-    h1,h2{
+    h1{
         font-size:4vw;
     }
     
-    h3{
-        font-size:4vw;
+    h2,h3,h4,h5,h6{
+        font-size:3vw;
+        margin-top:1vh;
+        margin-bottom:1vh;
     }
-    
     
     p{
         letter-spacing:1px;
@@ -129,40 +129,37 @@ header
 
     #indexWrap{
         display:grid;
-        width:100%;
-        height:100vh;
+        height:115vh;
         gap:1vw;
 
         grid-template-columns:1fr 1fr 1fr 1fr;
-        grid-template-rows: 10vh 25vh repeat(3,minmax(0vh,1fr)) 15vh;
+        grid-template-rows: 10vh 25vh minmax(0vh,1fr) minmax(0vh,0.7fr) minmax(0vh,1fr) 15vh 15vh;
         grid-template-areas:
         'nv nv nv nv'
-        'sc3 sc3 sc3 sc3'
-        'sc1 sc1 img5 img5'
-        'sc1 sc1 sc2 sc2'
-        'img6 img6  sc2 sc2'
+        'sc1 sc1 sc1 sc1'
+        'sc2 sc2 img1 img1'
+        'sc2 sc2 sc3 sc3'
+        'img2 img2  sc3 sc3'
+        'sc4 sc4 sc4 sc4'
         'ft ft ft ft';
     } 
 
-    #indexSection3
+    #indexText{
+        line-height:normal;
+        font-size:1.3vw;
+    }
+
+    #indexSection1
     {
-        grid-area:sc3;
+        grid-area:sc1;
         box-shadow: 0 0 10px 3px rgba(255,255,255,0.2);
         margin-top:4vw;
         margin-bottom:4vw;
     }
 
 
-    #indexSection1
+    #indexSection2
     {
-        margin-left:2vw;
-        margin-right:2vw;
-        display:flex;
-        flex-direction:column;
-        grid-area: sc1;
-        overflow:scroll;
-    }
-    #indexSection2{
         margin-left:2vw;
         margin-right:2vw;
         display:flex;
@@ -170,30 +167,37 @@ header
         grid-area: sc2;
         overflow:scroll;
     }
-    #indexImg6{
-        box-shadow: 0 0 20px 7px rgba(255,255,255,0.2);
-        grid-area:img6;
-        border-radius:10px;
+    #indexSection3{
+        margin-left:2vw;
+        margin-right:2vw;
+        display:flex;
+        flex-direction:column;
+        grid-area: sc3;
+        overflow:scroll;
     }
 
-    #indexImg2
-    {
-        display:none;
+    #indexSection4{
+        grid-area:sc4;
     }
 
-    #indexImg3
-    {
-        grid-area: img3;
-    }
-
-    #indexImg4
+    .removeOnMobile
     {
         display: none;
     }
 
-    #indexImg5
+    .removeOnMobileOnly{
+        display:none;
+    }
+
+    #indexImg1
     {
-        grid-area: img5;
+        grid-area: img1;
+        box-shadow: 0 0 10px 3px rgba(255,255,255,0.2);
+    }
+
+    #indexImg2
+    {
+        grid-area: img2;
         box-shadow: 0 0 10px 3px rgba(255,255,255,0.2);
     }
 
@@ -220,37 +224,37 @@ header
     }
 
     #spelText1{
-        border:5px solid #1e76cb;
+        border:5px solid #222222;
         border-radius:1vw;
         grid-area:sc1;
     }
     #spelText2{
-        border:5px solid #1e76cb; 
+        border:5px solid #222222; 
         border-radius:1vw;
         grid-area:sc2;
     }
     #spelText3{
-        border:5px solid #1e76cb;
+        border:5px solid #222222;
         border-radius:1vw;
         grid-area:sc3;
     }
     #spel1{
         position:relative;
-        border:5px solid #1e76cb;
+        border:5px solid #222222;
         border-radius:1vw;
         grid-area:ar1;
         max-width:2fr;
     }
     #spel2{
         position:relative;
-        border:5px solid #1e76cb; 
+        border:5px solid #222222; 
         border-radius:1vw;
         grid-area:ar2;
         max-width:2fr;
     }
     #spel3{
         position:relative;
-        border:5px solid #1e76cb;
+        border:5px solid #222222;
         border-radius:1vw;
         grid-area:ar3;
         max-width:2fr;
@@ -375,11 +379,11 @@ header
         width: 3vw;
     }
     
-    h1,h2{
+    h1{
         font-size:2vw;
     }
     
-    h3{
+    h2,h3,h4,h5,h6{
         font-size:1.65vw;
     }
     
@@ -396,87 +400,72 @@ header
     /*Dator huvudsidan*/
 
     #indexWrap{
-        display:grid;
-        width:100%;
-        height:290vh;
-        
-
+        display:grid;  
+        height:300vh;      
         grid-template-columns:1fr 1fr 1fr 1fr;
-        grid-template-rows: 10vh 50vh repeat(3,minmax(0vh,1fr)) 15vh;
+        grid-template-rows: 10vh 60vh minmax(0vh,1fr) minmax(0vh,0.6fr) minmax(0vh,1fr)  30vh 15vh;
         grid-template-areas:
         'nv nv nv nv'
-        'sc3 sc3 sc3 sc3'
-        'sc1 sc1 img5 img5'
-        'sc1 sc1 sc2 sc2'
-        'img6 img6 sc2 sc2'
+        'sc1 sc1 sc1 sc1'
+        'sc2 sc2 img1 img1'
+        'sc2 sc2 sc3 sc3'
+        'img2 img2 sc3 sc3'
+        'sc4 sc4 sc4 sc4'
         'ft ft ft ft';
     } 
 
-    #indexSection3{
+    #indexText{
+        line-height:normal;
+        font-size:1.3vw;
+    }
+
+    #indexSection1{
         display:flex;
-        grid-area:sc3;
+        grid-area:sc1;
         box-shadow: 0 0 20px 7px rgba(255,255,255,0.2);
         margin-top:5vh;
         margin-bottom:5vh;
     }
 
-    #indexSection1
+    #indexSection2
     {
-        margin-left:1vw;
-        margin-right:1vw;
         display:flex;
-        flex-direction:column;
-        grid-area: sc1;
-        border-radius:10px;
-    }
-    #indexSection2{
-        margin-left:1vw;
-        margin-right:1vw;
+        margin-left:3vw;
+        margin-right:3.5vw;
         display:flex;
         flex-direction:column;
         grid-area: sc2;
+        border-radius:10px;
+    }
+
+    #indexSection3{
+        margin-left:3.5vw;
+        margin-right:3vw;
+        display:flex;
+        flex-direction:column;
+        grid-area: sc3;
        
         border-radius:10px;
     }
 
-    #indexImg6{
-        grid-area:as;
-       
-        border-radius:10px;
+    #indexSection4{
+        grid-area:sc4;
     }
 
-   
+    .removeOnMobile{
+        margin-top:12.5vh;
+    }
 
     #indexImg1
     {
         grid-area: img1;
+      
+        box-shadow: 0 0 20px 7px rgba(255,255,255,0.2);
     }
 
     #indexImg2
     {
         grid-area: img2;
-    }
-    #indexImg3
-    {
-        grid-area: img3;
-    }
-
-    #indexImg4
-    {
-        display: block;
-        grid-area: img4;
-    }
-
-    #indexImg5
-    {
-        grid-area: img5;
-      
-        box-shadow: 0 0 20px 7px rgba(255,255,255,0.2);
-    }
-
-    #indexImg6
-    {
-        grid-area: img6;
         box-shadow: 0 0 20px 7px rgba(255,255,255,0.2);
     }
 
@@ -503,39 +492,39 @@ header
     }
 
     #spelText1{
-        border:5px solid #1e76cb; 
+        border:5px solid #222222; 
         display:flex;
        
         border-radius:1vw;
         grid-area:sc1;
     }
     #spelText2{
-        border:5px solid #1e76cb; 
+        border:5px solid #222222; 
         border-radius:1vw;
         grid-area:sc2;
     }
     #spelText3{
-        border:5px solid #1e76cb; 
+        border:5px solid #222222; 
         border-radius:1vw;
         grid-area:sc3;
     }
     #spel1{
         position:relative;
-        border:5px solid #1e76cb; 
+        border:5px solid #222222; 
         border-radius:1vw;
         grid-area:ar1;
         max-width:2fr;
     }
     #spel2{
         position:relative;
-        border:5px solid #1e76cb;; 
+        border:5px solid #222222; 
         border-radius:1vw;
         grid-area:ar2;
         max-width:2fr;
     }
     #spel3{
         position:relative;
-        border:5px solid #1e76cb; 
+        border:5px solid #222222; 
         border-radius:1vw;
         grid-area:ar3;
         max-width:2fr;
