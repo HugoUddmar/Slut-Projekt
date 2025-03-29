@@ -358,7 +358,7 @@ header
 
 @media screen and (min-width:501px)
 {
-    /*Det allmänna för datorsidorna button*/
+    /*Det allmänna för datorsidorna*/
 
     #indexFooter{
         margin-top:5vh;
@@ -401,9 +401,9 @@ header
 
     #indexWrap{
         display:grid;  
-        height:300vh;      
+        height:335vh;      
         grid-template-columns:1fr 1fr 1fr 1fr;
-        grid-template-rows: 10vh 60vh minmax(0vh,1fr) minmax(0vh,0.6fr) minmax(0vh,1fr)  30vh 15vh;
+        grid-template-rows: 10vh 60vh minmax(0vh,1fr) minmax(0vh,0.6fr) minmax(0vh,1fr) 70vh 15vh;
         grid-template-areas:
         'nv nv nv nv'
         'sc1 sc1 sc1 sc1'
@@ -414,9 +414,18 @@ header
         'ft ft ft ft';
     } 
 
-    #indexText{
+    .indexText{
+        letter-spacing:normal;
+        font-size:1.4vw;
         line-height:normal;
+        margin:0;
+    }
+    
+    .indexText2{
+        letter-spacing:normal;
         font-size:1.3vw;
+        line-height:normal;
+        margin:0;
     }
 
     #indexSection1{
@@ -450,10 +459,47 @@ header
 
     #indexSection4{
         grid-area:sc4;
+        padding-left:5vw;
+        padding-right:5vw;
+    }
+
+    #theTeam{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-evenly;
+    }
+
+    #specialHeader{
+        margin-top:9vh;
+        margin-bottom:5vh;
+        font-size:4vw;
+    }
+
+    #indexFooter{
+        margin:0;
+    }
+
+    .oneWorker{
+        display:flex;
+        flex-direction:column;
+        padding-left:3vw;
+        padding-right:3vw;
+        width:calc(100%/3);
+    }
+
+    .centerAlign{
+        display:flex;
+        justify-content:space-evenly;
+    }
+
+    .photoshopWorker{
+        width:20vw;
+        height: 20vh;
+        object-fit:contain;
     }
 
     .removeOnMobile{
-        margin-top:12.5vh;
+        margin-top:10vh;
     }
 
     #indexImg1
@@ -569,7 +615,6 @@ header
 
     #hurmangorspelNav{
         grid-area:nv;
-        background-color:#1e76cb;
     }
     #hurmangorspelIntroduktion{
         grid-area:in;
@@ -612,8 +657,6 @@ header
     }
     #hurmangorspelFooter{
         grid-area:ft;
-        background-color:#1e76cb;
-
     }
 
     .hurmangorspelTitlar{
