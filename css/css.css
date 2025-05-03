@@ -558,6 +558,10 @@ header
 
     }
 
+    .button:hover{
+        cursor:pointer;
+    }
+
     .buttonText{
         font-size:1.1em;
     }
