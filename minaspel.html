@@ -4,21 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
   <link rel="stylesheet" href="css/css.css">
-
-  <link rel="shortcut icon" href="spel/spel1/TemplateData/favicon.ico">
-  <link rel="stylesheet" href="spel/spel1/TemplateData/style.css">
-
-  <link rel="shortcut icon" href="spel/spel2/TemplateData/favicon.ico">
-  <link rel="stylesheet" href="spel/spel2/TemplateData/style.css">
 
   <title>Mina spel</title>
 </head>
 
 <body>
   <div id="minaSpelWrap">
-    <div class="menu">
+    <div class="menu removeOnPc">
       <a href="index.html">
         Landing page
       </a>
@@ -36,12 +29,20 @@
           Allt om datorspel - Mina spel
         </h1>
       </header>
-      <div class="menu-button">
+      <div id="removeOnMobileWithoutMargin" class="menu2">
+        <button class="button" onclick="window.location.href='index.html';"><p class="buttonText">Huvudsida</p></button>
+        <button class="button" onclick="window.location.href='hurmangorspel.html';"><p class="buttonText">Hur man gör spel</p></button>
+        <button class="button" onclick="window.location.href='spelkonsekvenser.html';"><p class="buttonText">Spelkonsekvenser</p></button>
+      </div>
+      <div class="menu-button removeOnPc">
         <img src="img/icon.png" id="navbutton" alt="Meny knapp">
       </div>
     </nav>
     <section id="spelText1">
-      <p>
+      <h2 id="titel1">
+        Revenge of Kevin
+      </h2>
+      <p id="text1">
         I det här spelet utforskade jag video effekter på kameran och ville göra designen själv. Jag är inte riktigt klar med spelet men målet var att skapa en annan känsla.
         Jag har ändrat både synfältet och lensförvrängningen. Sen ändrade jag färgen och la till en vinjett. Man kan gå runt med WASD och kolla runt med musen.
       </p>
@@ -49,8 +50,12 @@
     <article id="spel1">
       <iframe id="spel1real" src="spel1.html" title="spel1"></iframe>
     </article>
+    <img id="mario" alt="8-bitar mario" src="img/mario8bit.png">
     <section id="spelText2">
-      <p>
+      <h3 id="titel1">
+        Hungry ladybug
+      </h3>
+      <p id="text2">
         I det här spelet ville jag skapa känslan av att man kollade ner på en liten miljö med massa löv, bladlöss och en nyckelpiga.
         Jag gillade idén med att ha en nyckelpiga som ska försöka äta upp så många bladlöss som möjligt. Jag behövde även jobba med animationer vilket jag tyckte var kul.
       </p>
@@ -59,7 +64,10 @@
       <iframe id ="spel2real" src="spel2.html" title="spel2"></iframe>
     </article>
     <section id="spelText3">
-        <p>
+        <h4 id="titel1">
+          Astroid dash
+        </h4>
+        <p id="text3">
           Det här spelet gjorde jag för väldigt länge sen och det var främst för att kunna lägga upp ett spel på min pappas hemsida. Då hade jag ingen
           aning om hur man använde html, css och javascript men nu känns det som att jag utvecklats jättemycket och vet faktiskt hur man gör. 
         </p>
@@ -67,6 +75,7 @@
     <article id="spel3">
       <iframe id ="spel3real" src="spel3.html" title="spel3"></iframe>
     </article>
+    <img id="pacmanghost" alt="8-bitar pacman spöke" src="img/pacghost.png">
     <footer id="MinaSpelFooter">
       <p>Alla rättigheter reserverade</p>  
       <p>Allt om datorspel 2025 ©</p>

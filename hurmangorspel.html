@@ -8,7 +8,7 @@
 </head>
 <body>
   <div id="hurmangorspelWrapper">
-  <div class="menu">
+  <div class="menu removeOnPc">
       <a href="index.html">
         Landing page
       </a>
@@ -26,7 +26,12 @@
           Allt om datorspel - Hur man gör spel
         </h1>
       </header>
-      <div class="menu-button">
+      <div id="removeOnMobileWithoutMargin" class="hurmangorspelMenu2">
+        <button class="button2 button" onclick="window.location.href='minaspel.html';"><p class="buttonText">Huvudsida</p></button>
+        <button class="button2 button" onclick="window.location.href='minaspel.html';"><p class="buttonText">Mina spel</p></button>
+        <button class="button2 button" onclick="window.location.href='spelkonsekvenser.html';"><p class="buttonText">Spelkonsekvenser</p></button>
+      </div>
+      <div class="menu-button removeOnPc">
         <img src="img/icon.png" id="navbutton" alt="Meny knapp">
       </div>
     </nav>

@@ -8,7 +8,7 @@
 </head>
 <body>
   <div id="indexWrap">
-    <div class="menu">
+    <div class="menu removeOnPc">
       <a href="minaspel.html">
         
         Mina spel
@@ -32,7 +32,12 @@
           Allt om datorspel
         </h1>
       </header>
-      <div class="menu-button">
+      <div id="removeOnMobileWithoutMargin" class="menu2">
+        <button class="button" onclick="window.location.href='minaspel.html';"><p class="buttonText">Mina spel</p></button>
+        <button class="button" onclick="window.location.href='hurmangorspel.html';"><p class="buttonText">Hur man gör spel</p></button>
+        <button class="button" onclick="window.location.href='spelkonsekvenser.html';"><p class="buttonText">Spelkonsekvenser</p></button>
+      </div>
+      <div class="menu-button removeOnPc">
         <img src="img/icon.png" id="navbutton" alt="Meny knapp">
       </div>
     </nav>

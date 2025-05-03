@@ -255,13 +255,15 @@ header
 
     #minaSpelWrap
     {
+        overflow-x:hidden;
+        position:relative;
         display:grid;
         width:100%;
-        height:220vh;
+        height:270vh;
         gap:1vw;
 
-        grid-template-columns:1fr 35% 35% 1fr;
-        grid-template-rows:10vh repeat(3,minmax(0vh,3fr) minmax(0vh,4fr)) 10vh;
+        grid-template-columns:1fr 37% 37% 1fr;
+        grid-template-rows:10vh repeat(3,minmax(0vh,3fr) minmax(0vh,3.25fr)) 10vh;
         grid-template-areas:
         'nv nv nv nv'
         'sc1 sc1 sc1 sc1'
@@ -273,21 +275,82 @@ header
         'ft ft ft ft';
     }
 
+    #mario{
+        width:45px;
+        height:45px;
+        object-fit:fill;
+        rotate:-35deg;
+        position:absolute;
+        top: 65vh;
+        right:-6vw;
+        transform: rotateY(180deg);
+    }
+
+    #pacmanghost{
+        width:45px;
+        height:45px;
+        object-fit:fill;
+        rotate:45deg;
+        position:absolute;
+        bottom:30vh;
+        left:-4vw;
+        transform: rotateY(180deg);
+    }
+
+    #text1{
+        margin-left:5%;
+        margin-right:5%
+    }
+
+    #text2{
+        margin-left:5%;
+        margin-right:5%
+    }
+
+    #text3{
+        margin-left:5%;
+        margin-right:5%
+    }
+
+    #titel1{
+        font-size:1.5em;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+    #titel2{
+        font-size:1.5em;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
+    #titel3{
+        font-size:1.5em;
+        margin-left:5%;
+        margin-right:5%;
+    }
+
     #spelText1{
-        margin-top:10vh;
-        border:5px solid #222222;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+        margin-top:7vh;
         border-radius:1vw;
         grid-area:sc1;
     }
     #spelText2{
-        margin-top:10vh;
-        border:5px solid #222222; 
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+        margin-top:7vh;
         border-radius:1vw;
         grid-area:sc2;
     }
     #spelText3{
-        margin-top:10vh;
-        border:5px solid #222222;
+        display:flex;
+        flex-direction:column;
+        justify-content:space-evenly;
+        margin-top:7vh;
         border-radius:1vw;
         grid-area:sc3;
     }
@@ -419,27 +482,33 @@ header
         grid-template-columns: 1fr 44% 5% 44% 1fr;
         grid-template-areas:
         'nv nv nv nv nv'
-        '. sc3 sc3 sc3 .'
-        '. img1 . img4 .'
         '. sc2 sc2 sc2 .'
         '. img3 . img2 .'
+        '. sc3 sc3 sc3 .'
+        '. img1 img1 . .'
         'ft ft ft ft ft';
     }
 
     #konsekvensSection1{
-        display:none;
+        grid-area:sc3;
+        display:block;
+        margin-left:1vh;
+        margin-top:7vh;
+        margin-bottom:3vh;
+        margin-right:15vh;
     }
 
     #konsekvensSection2{
         grid-area:sc2;
         display:block;
-        margin:auto;
+        margin-left:1vh;
+        margin-top:7vh;
+        margin-bottom:3vh;
+        margin-right:15vh;
     }
 
     #konsekvensSection3{
-        grid-area:sc3;
-        display:block;
-        margin:auto;
+        display:none;
     }
 
     #konsekvensSection4{
@@ -471,19 +540,8 @@ header
     }
 
     #konsekvensImg4{
-        grid-area:img4;
-        object-fit:fill;
-        max-width:100%;
-        height:16vh;
+        display:none;
         
-    }
-
-    #konsekvensImg5{
-        display:none;
-    }
-
-    #konsekvensImg6{
-        display:none;
     }
 }
 
@@ -491,8 +549,29 @@ header
 {
     /*Det allmänna för datorsidorna*/
 
-    #indexFooter{
-        margin-top:5vh;
+    .button{
+        width:20%;
+        height:55%;
+        border-radius:0.5vw;
+        border: 2px solid rgb(150, 150, 150);
+        background-color:#222222;
+
+    }
+
+    .buttonText{
+        font-size:1.1em;
+    }
+
+    .menu2{
+        width:60%;
+        height:100%;
+        display:flex;
+        justify-content:space-evenly;
+        align-items:center;
+    }
+
+    .removeOnPc{
+        display:none;
     }
     
     a{
@@ -531,9 +610,9 @@ header
 
     #indexWrap{
         display:grid;  
-        height:335vh;      
+        height:340vh;      
         grid-template-columns:1fr 1fr 1fr 1fr;
-        grid-template-rows: 10vh 60vh minmax(0vh,1fr) minmax(0vh,0.6fr) minmax(0vh,1fr) 70vh 15vh;
+        grid-template-rows: 15vh 60vh minmax(0vh,1fr) minmax(0vh,0.6fr) minmax(0vh,1fr) 70vh 15vh;
         grid-template-areas:
         'nv nv nv nv'
         'sc1 sc1 sc1 sc1'
@@ -607,6 +686,7 @@ header
 
     #indexFooter{
         margin:0;
+        margin-top:5vh;
     }
 
     .oneWorker{
@@ -649,41 +729,98 @@ header
 
     #minaSpelWrap
     {
+        overflow-x:hidden;
+        position:relative;
         display:grid;
         width:100%;
-        height:380vh;
+        height:465vh;
         gap:1vw;
 
-        grid-template-columns:1fr 1fr 1fr 1fr;
-        grid-template-rows:10vh repeat(3,minmax(25vh,2.5fr) minmax(70vh,4fr)) 10vh;
+        grid-template-columns:1fr 1fr 50% 1fr 1fr;
+        grid-template-rows:15vh repeat(3,minmax(25vh,2.5fr) minmax(70vh,3.5fr)) 10vh;
         grid-template-areas:
-        'nv nv nv nv'
-        'sc1 sc1 sc1 sc1'
-        '. ar1 ar1 .'
-        'sc2 sc2 sc2 sc2'
-        '. ar2 ar2 .'
-        'sc3 sc3 sc3 sc3'
-        '. ar3 ar3 .'
-        'ft ft ft ft';
+        'nv nv nv nv nv'
+        '. sc1 sc1 sc1 .'
+        '. . ar1 . .'
+        '. sc2 sc2 sc2 .'
+        '. . ar2 . .'
+        '. sc3 sc3 sc3 .'
+        '. . ar3 . .'
+        'ft ft ft ft ft';
+    }
+
+    #mario{
+        width:150px;
+        height:150px;
+        object-fit:fill;
+        rotate:-35deg;
+        position:absolute;
+        top: 95vh;
+        right:-6vw;
+        transform: rotateY(180deg);
+    }
+
+    #pacmanghost{
+        width:100px;
+        height:100px;
+        object-fit:fill;
+        rotate:45deg;
+        position:absolute;
+        bottom:50vh;
+        left:-2vw;
+        transform: rotateY(180deg);
+    }
+
+    #text1{
+        margin-left:10vh;
+        margin-right:10vh;
+    }
+
+    #text2{
+        margin-left:10vh;
+        margin-right:10vh;
+    }
+
+    #text3{
+        margin-left:10vh;
+        margin-right:10vh;
+    }
+
+    #titel1{
+        font-size:2em;
+        margin-left:10vh;
+        margin-right:10vh;
+    }
+
+    #titel2{
+        font-size:2em;
+        margin-left:10vh;
+        margin-right:10vh;
+    }
+
+    #titel3{
+        font-size:2em;
+        margin-left:10vh;
+        margin-right:10vh;
     }
 
     #spelText1{
-        margin-top:20vh;
-        border:5px solid #222222; 
+        margin-top:10vh;
         display:flex;
-       
+        flex-direction:column;
+        
         border-radius:1vw;
         grid-area:sc1;
     }
     #spelText2{
-        margin-top:20vh;
-        border:5px solid #222222; 
+        flex-direction:column;
+        margin-top:10vh;
         border-radius:1vw;
         grid-area:sc2;
     }
     #spelText3{
-        margin-top:20vh;
-        border:5px solid #222222; 
+        flex-direction:column;
+        margin-top:10vh;
         border-radius:1vw;
         grid-area:sc3;
     }
@@ -733,7 +870,7 @@ header
         width:100%;
         
         grid-template-columns:1fr auto 1fr;
-        grid-template-rows: 10vh auto 45vh 500vh 10vh;
+        grid-template-rows: 15vh auto 45vh 500vh 10vh;
         grid-template-areas:
         'nv nv nv'
         '. img .'
@@ -742,14 +879,26 @@ header
         'ft ft ft';
     }
 
+    .hurmangorspelMenu2{
+        width:50%;
+        height:100%;
+        display:flex;
+        justify-content:space-evenly;
+        align-items:center;
+    }
+
+    .button2{
+        width:25%;
+    }
+
     #hurmangorspelNav{
         grid-area:nv;
     }
 
     #hurmangorspelIntroduktion{
         grid-area:in;
-        padding-left:2vw;
-        padding-right:2vw;
+        padding-left:10vw;
+        padding-right:10vw;
     }
     #hurmangorspelImg{
         display:flex;
@@ -810,15 +959,14 @@ header
         display:grid;
         width:100%;
 
-        grid-template-rows: 15vh 47vh 47vh 47vh 47vh 10vh;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 20vh 60vh 60vh 60vh 10vh;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-areas:
-        'nv nv nv nv'
-        'sc1 img1 . .'
-        'img2 sc2 img3 .'
-        '. img4 sc3 img5'
-        '. . img6 sc4'
-        'ft ft ft ft';
+        'nv nv nv'
+        'sc1 img1 .'
+        'img2 sc2 img3'
+        '. img4 sc3'
+        'ft ft ft';
     }
 
     #konsekvensNav{
@@ -843,52 +991,40 @@ header
         padding-right:1vw;
     }
 
-    #konsekvensSection4{
-        grid-area:sc4;
-        padding-left:1vw;
-        padding-right:1vw;
-    }
-
     #konsekvensImg1{ 
         grid-area:img1;
-        object-fit:fill;
-        max-width:100%;
-        height:25vh;
+        translate:0 -9vh;
+        padding:4%;
+        width:92%;
+        height:92%;
+        object-fit:contain;
     }
 
     #konsekvensImg2{
         grid-area:img2;
-        object-fit:fill;
-        max-width:100%;
-        height:25vh;
+        translate:0 -8vh;
+        padding:4%;
+        width:92%;
+        height:92%;
+        object-fit:contain;
     }
 
     #konsekvensImg3{
         grid-area:img3;
-        object-fit:fill;
-        max-width:100%;
-        height:25vh;
+        translate:0 -8vh;
+        padding:4%;
+        width:92%;
+        height:92%;
+        object-fit:contain;
     }
 
     #konsekvensImg4{
         grid-area:img4;
-        object-fit:fill;
-        max-width:100%;
-        height:25vh;
-    }
-
-    #konsekvensImg5{
-        grid-area:img5;
-        object-fit:fill;
-        max-width:100%;
-        height:25vh;
-    }
-
-    #konsekvensImg6{
-        grid-area:img6;
-        object-fit:fill;
-        max-width:100%;
-        height:25vh;
+        translate:0 -5vh;
+        padding:2%;
+        width:96%;
+        height:96%;
+        object-fit:contain;
     }
 
     .center{
